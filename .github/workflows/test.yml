@@ -21,8 +21,7 @@ jobs:
     - name: Retrieve and Parse JSON data
       run: |
         JSON_DATA="${{ secrets.JSON_DATA }}"
-        echo " JSON Data: $JSON_DATA" 
-        PDATA=$(echo "$JSON_DATA" | yq r -j -)
+        PARSED_JSON=$(echo "$JSON_DATA" | jq .)
         echo "Parsed JSON Data: $PDATA" 
         
     - name: Print Current Path
