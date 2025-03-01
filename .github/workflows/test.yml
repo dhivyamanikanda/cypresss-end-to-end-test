@@ -24,8 +24,7 @@ jobs:
         # echo "JSON Data: $JSON_DATA" 
         PARSED_JSON=$(echo "$JSON_DATA" | jq .)
         echo "Parsed JSON Data: $PARSED_JSON"
-        echo "::set-env name=PARSED_JSON::$PARSED_JSON"
-        node test.js
+        node test.js $PARSED_JSON
         
     - name: Print Current Path
       run: |
