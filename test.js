@@ -1,12 +1,16 @@
-const jsonObject = JSON.parse(process.env.PARSED_JSON);
+const fs = require('fs');
 
-console.log('Parsed JSON Data:', jsonObject);
+// Read JSON data from the parsed_json.json file
+const jsonData = fs.readFileSync('parsed_json.json', 'utf8');
 
-// Access the data for different locales (e.g., gb, de) as needed
-const gbUsername = jsonObject.gb.username;
-const gbPassword = jsonObject.gb.password;
-const gbLocale = jsonObject.gb.locale;
+try {
+  // Parse the JSON data into a JavaScript object
+  const jsonObject = JSON.parse(jsonData);
 
-const deUsername = jsonObject.de.username;
-const dePassword = jsonObject.de.password;
-const deLocale = jsonObject.de.locale;
+  // Access and use the parsed JSON data
+  console.log('Parsed JSON Data:', jsonObject);
+
+  // Your further script logic using the parsed JSON data
+} catch (error) {
+  console.error('Error parsing JSON data:', error);
+}
