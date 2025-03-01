@@ -22,7 +22,7 @@ jobs:
       run: |
         JSON_DATA="${{ secrets.JSON_DATA }}"
         PARSED_JSON=$(echo "$JSON_DATA" | jq .)
-        echo "Parsed JSON Data: $PDATA" 
+        echo "Parsed JSON Data: $PARSED_JSON" 
         
     - name: Print Current Path
       run: |
