@@ -32,4 +32,4 @@ jobs:
     - name: Run JavaScript file
       run: |
         echo $PARSED_JSON > parsed_json.json
-        $PARSED_JSON node test.js
+        node test.js
