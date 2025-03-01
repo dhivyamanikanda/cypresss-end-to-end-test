@@ -1,2 +1,2 @@
-const jsonData = JSON.parse(process.env.PARSED_JSON);
+const jsonData = JSON.parse(process.argv[2]);
 console.log('Parsed JSON Data:', jsonData);
