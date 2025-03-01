@@ -21,7 +21,7 @@ jobs:
     - name: Retrieve and Parse JSON data
       run: |
         JSON_DATA='${{ secrets.JSON_DATA }}'
-        echo "JSON Data: $JSON_DATA" 
+        # echo "JSON Data: $JSON_DATA" 
         PARSED_JSON=$(echo "$JSON_DATA" | jq .)
         echo "Parsed JSON Data: $PARSED_JSON"
         
@@ -32,4 +32,5 @@ jobs:
     - name: Run JavaScript file
       run: |
         echo $PARSED_JSON > parsed_json.json
+        echo parsed_json.json
         node test.js
