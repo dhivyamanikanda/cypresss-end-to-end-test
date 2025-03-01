@@ -25,4 +25,4 @@ jobs:
         # echo "Parsed JSON Data: $PARSED_JSON" 
 
     - name: Run JavaScript file
-      run: $JSON_DATA ../../node test.js
+      run: $JSON_DATA node ../../test.js
