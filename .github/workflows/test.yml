@@ -30,4 +30,6 @@ jobs:
         pwd
 
     - name: Run JavaScript file
-      run: $PARSED_JSON node test.js
+      run: |
+        echo $PARSED_JSON > parsed_json.json
+        $PARSED_JSON node test.js
