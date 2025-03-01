@@ -23,6 +23,10 @@ jobs:
         JSON_DATA="${{ secrets.JSON_DATA }}"
         # PARSED_JSON=$(echo $JSON_DATA | jq -r .)
         # echo "Parsed JSON Data: $PARSED_JSON" 
+        
+    - name: Print Current Path
+      run: |
+        pwd
 
     - name: Run JavaScript file
-      run: $JSON_DATA node ../../test.js
+      run: $JSON_DATA node ../test.js
