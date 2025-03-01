@@ -20,10 +20,11 @@ jobs:
       
     - name: Retrieve and Parse JSON data
       run: |
-        # JSON_DATA="${{ secrets.JSON_DATA }}"
+        JSON_DATA='${{ secrets.JSON_DATA }}'
+        echo "JSON Data: $JSON_DATA" 
         # PARSED_JSON=$(echo "$JSON_DATA" | jq .)
         # echo "Parsed JSON Data: $PARSED_JSON" 
-        JSON_DATA='{"gb":{"username":"dhivya.kumar+ymjex0mn@test.com","password":"ca56b4q3vzsddbpq6s6snnp","locale":"en-gb"},"de":{"username":"dhivya.kumar+2q95s2sy@test.com","password":"eeefg2sdsqq19fby3dap1pm","locale":"de-de"}}'
+        # JSON_DATA='{"gb":{"username":"dhivya.kumar+ymjex0mn@test.com","password":"ca56b4q3vzsddbpq6s6snnp","locale":"en-gb"},"de":{"username":"dhivya.kumar+2q95s2sy@test.com","password":"eeefg2sdsqq19fby3dap1pm","locale":"de-de"}}'
         PARSED_JSON=$(echo "$JSON_DATA" | jq .)
         echo "Parsed JSON Data: $PARSED_JSON"
         
