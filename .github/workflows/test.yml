@@ -31,6 +31,4 @@ jobs:
 
     - name: Run JavaScript file
       run: |
-        echo $PARSED_JSON > parsed_json.json
-        cat parsed_json.json
-        node test.js
+        node test.js $PARSED_JSON
