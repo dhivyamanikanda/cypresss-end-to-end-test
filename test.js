@@ -8,3 +8,9 @@ Object.keys(jsonData).forEach(key => {
   // Access nested properties as needed
 });
 
+// Access the parsed JSON object
+console.log(jsonData);
+
+console.log('Username (gb):', jsonData.gb.username);
+console.log('Password (de):', jsonData.de.password);
+
