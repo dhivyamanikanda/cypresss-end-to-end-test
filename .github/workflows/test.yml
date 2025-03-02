@@ -22,9 +22,9 @@ jobs:
       run: |
         JSON_DATA='${{ secrets.JSON_DATA }}'
         echo "JSON Data: $JSON_DATA" 
-        parsedData=$(echo "$JSON_DATA" | jq '.')
-        echo "Parsed JSON Data: $parsedData"
-        node test.js $parsedData
+        # parsedData=$(echo "$JSON_DATA" | jq '.')
+        # echo "Parsed JSON Data: $parsedData"
+        node test.js $JSON_DATA
         
     - name: Print Current Path
       run: |
