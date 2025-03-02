@@ -29,8 +29,3 @@ jobs:
     - name: Print Current Path
       run: |
         pwd
-
-    # - name: Run JavaScript file
-    #   run: |
-    #     echo "Parsed JSON Data: $PARSED_JSON"
-    #     node test.js $PARSED_JSON
