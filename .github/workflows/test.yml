@@ -21,10 +21,10 @@ jobs:
     - name: Retrieve and Parse JSON data
       run: |
         JSON_DATA='${{ secrets.JSON_DATA }}'
-        echo "JSON Data: $JSON_DATA" 
+        echo "JSON Data: ${{ secrets.JSON_DATA }}" 
         # parsedData=$(echo "$JSON_DATA" | jq '.')
         # echo "Parsed JSON Data: $parsedData"
-        node test.js $JSON_DATA
+        node test.js '${{ secrets.JSON_DATA }}'
         
     - name: Print Current Path
       run: |
