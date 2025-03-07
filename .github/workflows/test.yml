@@ -23,4 +23,7 @@ jobs:
     - name: Retrieve and Parse JSON data
       run: |
         JSON_DATA='${{ secrets.JSON_DATA }}'
-        node src/* JSON_DATA
+        node src/test2.js JSON_DATA
+
+    - name: Run Test 2
+      run: node src/test3.js JSON_DATA
