@@ -22,7 +22,7 @@ jobs:
       run: |
         JSON_DATA='${{ secrets.JSON_DATA }}'
         echo "JSON Data: ${{ secrets.JSON_DATA }}" 
-        node src/test*.js ${{ secrets.JSON_DATA }}
+        node src/test2.js ${{ secrets.JSON_DATA }}
       env:
           JSON_DATA: ${{ secrets.JSON_DATA }}
         
